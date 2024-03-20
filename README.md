@@ -1,4 +1,5 @@
-# Terraform Module for Gitea in Kubernetes
+# Terraform Module for Headlamp in Kubernetes
 
-This is a Terraform module to deploy Gitea in a Kubernetes
-cluster.
+This is a [Terraform](https://www.terraform.io/) module to create and
+manage an installation of [Gitea](https://about.gitea.com/) UI in a
+[Kubernetes](https://kubernetes.io/) cluster.
