@@ -13,13 +13,19 @@ variable "gitea_version" {
 variable "storage_class" {
     type        = string
     default     = ""
-    description = "storage class to use for gitea-shared-storage"
+    description = "storage class to use"
 }
 
-variable "storage_size" {
+variable "gitea_storage_size" {
     type        = string
     default     = "10Gi"
-    description = "storage size to use for PVCs"
+    description = "storage size to use for Gitea"
+}
+
+variable "db_storage_size" {
+    type        = string
+    default     = "10Gi"
+    description = "storage size to use for the database"
 }
 
 variable "host" {
@@ -47,4 +53,15 @@ variable "issuer_type" {
         condition     = contains(["cluster-issuer", "issuer"], var.issuer_type)
         error_message = "issuer type must be 'issuer' or 'cluster-issuer'"
     }
+}
+
+variable "username" {
+    type        = string
+    default     = "gitea"
+    description = "Gitea admin username"
+}
+
+variable "password" {
+    type        = string
+    description = "Gitea admin password"
 }
