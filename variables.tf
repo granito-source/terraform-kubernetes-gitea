@@ -24,13 +24,14 @@ variable "gitea_storage_size" {
 
 variable "db_storage_size" {
     type        = string
-    default     = "10Gi"
+    default     = "5Gi"
     description = "storage size to use for the database"
 }
 
 variable "host" {
     type        = string
-    description = "FQDN for the ingress"
+    default     = null
+    description = "FQDN for the ingress, must be set to configure ingress"
 }
 
 variable "ingress_class_name" {
@@ -63,5 +64,6 @@ variable "username" {
 
 variable "password" {
     type        = string
-    description = "Gitea admin password"
+    default     = null
+    description = "Gitea seed admin password (change after the installation)"
 }
