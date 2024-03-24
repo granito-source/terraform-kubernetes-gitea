@@ -52,7 +52,7 @@ resource "helm_release" "gitea" {
         !local.configure_ingress ? "" : <<-EOT3
         ingress:
           enabled: true
-          className: ${var.ingress_class_name}
+          className: ${var.ingress_class}
           annotations:
           hosts:
             - host: ${var.host}

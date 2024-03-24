@@ -34,7 +34,7 @@ variable "host" {
     description = "FQDN for the ingress, must be set to configure ingress"
 }
 
-variable "ingress_class_name" {
+variable "ingress_class" {
     type        = string
     default     = null
     description = "ingress class to use"
